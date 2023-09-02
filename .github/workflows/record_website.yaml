@@ -1,0 +1,15 @@
+name: Record Website
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  record-website:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Record website
+        run: node record-website.js
+      - name: Move recording file to root
+        run: mv recording.mp4 .
