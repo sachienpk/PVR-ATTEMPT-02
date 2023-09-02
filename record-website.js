@@ -4,7 +4,7 @@ const puppeteer = require("puppeteer");
   const browser = await puppeteer.launch({ headless: "new" });
   const page = await browser.newPage();
 
-  await page.goto("https://sastro-go.vercel.app/web-player/");
+  await page.goto("https://www.youtube.com/watch?v=mhY_PhCCMgY");
 
   // Start recording the website.
   const mediaStream = await page.mediaDevices.getDisplayMedia({
