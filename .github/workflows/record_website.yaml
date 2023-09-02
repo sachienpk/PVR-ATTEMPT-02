@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install puppeteer
+        run: npm install puppeteer
       - name: Record website
         run: node record-website.js
       - name: Move recording file to root
