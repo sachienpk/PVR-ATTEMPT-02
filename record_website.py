@@ -16,7 +16,8 @@ def record_website(url):
   capabilities["goog:chromeOptions"] = options
 
   # Create a WebDriver object.
-  driver = webdriver.Chrome(desired_capabilities=capabilities)
+  driver = webdriver.Chrome()
+  driver.set_desired_capabilities(capabilities)
 
   # Navigate to the website.
   driver.get(url)
@@ -36,4 +37,3 @@ def main():
 
 if __name__ == "__main__":
   main()
-
