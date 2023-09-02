@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install puppeteer
-        run: npm install puppeteer
+      - name: Install dependencies
+        run: pip install selenium chromedriver
       - name: Record website
-        run: node record-website.js
+        run: python record_website.py
       - name: Move recording file to root
         run: mv recording.mp4 .
